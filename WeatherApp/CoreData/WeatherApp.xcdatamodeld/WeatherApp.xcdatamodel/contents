@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19574" systemVersion="21D62" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CurrentData" representedClassName="CurrentData" syncable="YES">
+        <attribute name="dt" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="humidity" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="sunrise" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="sunset" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="temp" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="windSpeed" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="forecast" maxCount="1" deletionRule="Nullify" destinationEntity="ForecastData" inverseName="current" inverseEntity="ForecastData"/>
+        <relationship name="weather" maxCount="1" deletionRule="Nullify" destinationEntity="WeatherData" inverseName="current" inverseEntity="WeatherData"/>
+    </entity>
+    <entity name="DailyData" representedClassName="DailyData" syncable="YES">
+        <attribute name="clouds" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="dt" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="humidity" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="moonPhase" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="moonrise" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="moonset" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="pop" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="rain" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="snow" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="sunrise" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="sunset" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="uvi" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="windDeg" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="windSpeed" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <relationship name="feelsLike" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FeelsLikeData" inverseName="daily" inverseEntity="FeelsLikeData"/>
+        <relationship name="forecast" maxCount="1" deletionRule="Nullify" destinationEntity="ForecastData" inverseName="daily" inverseEntity="ForecastData"/>
+        <relationship name="temp" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TempData" inverseName="daily" inverseEntity="TempData"/>
+        <relationship name="weather" maxCount="1" deletionRule="Nullify" destinationEntity="WeatherData" inverseName="dailly" inverseEntity="WeatherData"/>
+    </entity>
+    <entity name="FeelsLikeData" representedClassName="FeelsLikeData" syncable="YES">
+        <attribute name="day" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="night" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <relationship name="daily" maxCount="1" deletionRule="Nullify" destinationEntity="DailyData" inverseName="feelsLike" inverseEntity="DailyData"/>
+    </entity>
+    <entity name="ForecastData" representedClassName="ForecastData" syncable="YES">
+        <attribute name="lat" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="location" attributeType="String"/>
+        <attribute name="lon" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="usingGeolacation" attributeType="Boolean" usesScalarValueType="YES"/>
+        <relationship name="current" maxCount="1" deletionRule="Nullify" destinationEntity="CurrentData" inverseName="forecast" inverseEntity="CurrentData"/>
+        <relationship name="daily" toMany="YES" deletionRule="Nullify" destinationEntity="DailyData" inverseName="forecast" inverseEntity="DailyData"/>
+        <relationship name="hourly" toMany="YES" deletionRule="Nullify" destinationEntity="HourlyData" inverseName="forecast" inverseEntity="HourlyData"/>
+    </entity>
+    <entity name="HourlyData" representedClassName="HourlyData" syncable="YES">
+        <attribute name="clouds" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="dt" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="feelsLike" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="pop" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="temp" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="windDeg" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="windSpeed" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <relationship name="forecast" maxCount="1" deletionRule="Nullify" destinationEntity="ForecastData" inverseName="hourly" inverseEntity="ForecastData"/>
+        <relationship name="weather" maxCount="1" deletionRule="Nullify" destinationEntity="WeatherData" inverseName="hourly" inverseEntity="WeatherData"/>
+    </entity>
+    <entity name="TempData" representedClassName="TempData" syncable="YES">
+        <attribute name="day" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="max" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="min" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="night" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <relationship name="daily" maxCount="1" deletionRule="Nullify" destinationEntity="DailyData" inverseName="temp" inverseEntity="DailyData"/>
+    </entity>
+    <entity name="WeatherData" representedClassName="WeatherData" syncable="YES">
+        <attribute name="icon" attributeType="String"/>
+        <attribute name="weatherDescription" attributeType="String"/>
+        <relationship name="current" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CurrentData" inverseName="weather" inverseEntity="CurrentData"/>
+        <relationship name="dailly" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DailyData" inverseName="weather" inverseEntity="DailyData"/>
+        <relationship name="hourly" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="HourlyData" inverseName="weather" inverseEntity="HourlyData"/>
+    </entity>
+    <elements>
+        <element name="ForecastData" positionX="-63" positionY="-18" width="128" height="134"/>
+        <element name="CurrentData" positionX="-63" positionY="9" width="128" height="149"/>
+        <element name="DailyData" positionX="-54" positionY="45" width="128" height="299"/>
+        <element name="FeelsLikeData" positionX="-36" positionY="135" width="128" height="74"/>
+        <element name="WeatherData" positionX="-18" positionY="144" width="128" height="104"/>
+        <element name="HourlyData" positionX="0" positionY="153" width="128" height="164"/>
+        <element name="TempData" positionX="18" positionY="162" width="128" height="104"/>
+    </elements>
+</model>
