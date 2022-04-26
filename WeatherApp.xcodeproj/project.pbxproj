@@ -28,6 +28,10 @@
 		9F247BB02808519200B622D6 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F247BAF2808519200B622D6 /* LocationManager.swift */; };
 		9F247BB22808523B00B622D6 /* GeocodingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F247BB12808523B00B622D6 /* GeocodingModel.swift */; };
 		9F247BB928085B6700B622D6 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F247BB828085B6700B622D6 /* NetworkService.swift */; };
+		9F6A595028169127007936A5 /* MoreForHoursViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6A594F28169127007936A5 /* MoreForHoursViewController.swift */; };
+		9F6A5952281693A8007936A5 /* HourlyGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6A5951281693A8007936A5 /* HourlyGraphView.swift */; };
+		9F6A595428169421007936A5 /* GraphCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6A595328169421007936A5 /* GraphCollectionViewCell.swift */; };
+		9F6A595728169D8A007936A5 /* HourForecastDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6A595628169D8A007936A5 /* HourForecastDetailsTableViewCell.swift */; };
 		9F7D3600280937B900CE3DCB /* ConvertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7D35FF280937B900CE3DCB /* ConvertService.swift */; };
 		9F7D36022809416200CE3DCB /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7D36012809416200CE3DCB /* LocationViewController.swift */; };
 		9F7D3604280961B500CE3DCB /* HourlyForecastCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7D3603280961B500CE3DCB /* HourlyForecastCollectionViewCell.swift */; };
@@ -48,6 +52,11 @@
 		9F7D36762809907900CE3DCB /* DailyData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7D36682809907900CE3DCB /* DailyData+CoreDataProperties.swift */; };
 		9F7D36782809973D00CE3DCB /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7D36772809973D00CE3DCB /* LocationViewModel.swift */; };
 		9F7D367A2809978C00CE3DCB /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7D36792809978C00CE3DCB /* CoreDataStack.swift */; };
+		9FCF97132817C9500052CDCC /* MoreForDaysViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCF97122817C9500052CDCC /* MoreForDaysViewController.swift */; };
+		9FCF97152817CC4C0052CDCC /* DayNightForecastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCF97142817CC4C0052CDCC /* DayNightForecastView.swift */; };
+		9FCF97172817CDAC0052CDCC /* DateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCF97162817CDAC0052CDCC /* DateCollectionViewCell.swift */; };
+		9FCF97192817CDDF0052CDCC /* SunAndMoonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCF97182817CDDF0052CDCC /* SunAndMoonView.swift */; };
+		9FCF971C2817CFF50052CDCC /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9FCF971B2817CFF50052CDCC /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +83,10 @@
 		9F247BAF2808519200B622D6 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		9F247BB12808523B00B622D6 /* GeocodingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeocodingModel.swift; sourceTree = "<group>"; };
 		9F247BB828085B6700B622D6 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		9F6A594F28169127007936A5 /* MoreForHoursViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreForHoursViewController.swift; sourceTree = "<group>"; };
+		9F6A5951281693A8007936A5 /* HourlyGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyGraphView.swift; sourceTree = "<group>"; };
+		9F6A595328169421007936A5 /* GraphCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphCollectionViewCell.swift; sourceTree = "<group>"; };
+		9F6A595628169D8A007936A5 /* HourForecastDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourForecastDetailsTableViewCell.swift; sourceTree = "<group>"; };
 		9F7D35FF280937B900CE3DCB /* ConvertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertService.swift; sourceTree = "<group>"; };
 		9F7D36012809416200CE3DCB /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		9F7D3603280961B500CE3DCB /* HourlyForecastCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyForecastCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -94,6 +107,10 @@
 		9F7D36682809907900CE3DCB /* DailyData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DailyData+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		9F7D36772809973D00CE3DCB /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
 		9F7D36792809978C00CE3DCB /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		9FCF97122817C9500052CDCC /* MoreForDaysViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreForDaysViewController.swift; sourceTree = "<group>"; };
+		9FCF97142817CC4C0052CDCC /* DayNightForecastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayNightForecastView.swift; sourceTree = "<group>"; };
+		9FCF97162817CDAC0052CDCC /* DateCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCollectionViewCell.swift; sourceTree = "<group>"; };
+		9FCF97182817CDDF0052CDCC /* SunAndMoonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunAndMoonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FCF971C2817CFF50052CDCC /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,6 +193,8 @@
 			isa = PBXGroup;
 			children = (
 				9F094FE728083097006451C7 /* Main */,
+				9F6A594E28169107007936A5 /* Hours */,
+				9FCF97112817C91E0052CDCC /* Days */,
 				9F094FD828081342006451C7 /* OnboardingViewController.swift */,
 			);
 			path = ViewControllers;
@@ -252,6 +272,28 @@
 			path = CoreData;
 			sourceTree = "<group>";
 		};
+		9F6A594E28169107007936A5 /* Hours */ = {
+			isa = PBXGroup;
+			children = (
+				9F6A594F28169127007936A5 /* MoreForHoursViewController.swift */,
+				9F6A5951281693A8007936A5 /* HourlyGraphView.swift */,
+				9F6A595328169421007936A5 /* GraphCollectionViewCell.swift */,
+				9F6A595628169D8A007936A5 /* HourForecastDetailsTableViewCell.swift */,
+			);
+			path = Hours;
+			sourceTree = "<group>";
+		};
+		9FCF97112817C91E0052CDCC /* Days */ = {
+			isa = PBXGroup;
+			children = (
+				9FCF97122817C9500052CDCC /* MoreForDaysViewController.swift */,
+				9FCF97142817CC4C0052CDCC /* DayNightForecastView.swift */,
+				9FCF97162817CDAC0052CDCC /* DateCollectionViewCell.swift */,
+				9FCF97182817CDDF0052CDCC /* SunAndMoonView.swift */,
+			);
+			path = Days;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -268,6 +310,9 @@
 			dependencies = (
 			);
 			name = WeatherApp;
+			packageProductDependencies = (
+				9FCF971B2817CFF50052CDCC /* SnapKit */,
+			);
 			productName = WeatherApp;
 			productReference = 9F094FB428080D13006451C7 /* WeatherApp.app */;
 			productType = "com.apple.product-type.application";
@@ -296,6 +341,9 @@
 				Base,
 			);
 			mainGroup = 9F094FAB28080D12006451C7;
+			packageReferences = (
+				9FCF971A2817CFF50052CDCC /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 9F094FB528080D13006451C7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -325,6 +373,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FCF97132817C9500052CDCC /* MoreForDaysViewController.swift in Sources */,
 				9F094FC228080D13006451C7 /* WeatherApp.xcdatamodeld in Sources */,
 				9F7D36712809907900CE3DCB /* TempData+CoreDataClass.swift in Sources */,
 				9F7D3600280937B900CE3DCB /* ConvertService.swift in Sources */,
@@ -332,14 +381,19 @@
 				9F7D36722809907900CE3DCB /* TempData+CoreDataProperties.swift in Sources */,
 				9F7D36702809907900CE3DCB /* HourlyData+CoreDataProperties.swift in Sources */,
 				9F094FE62808308E006451C7 /* MainViewController.swift in Sources */,
+				9FCF97192817CDDF0052CDCC /* SunAndMoonView.swift in Sources */,
 				9F094FBC28080D13006451C7 /* ViewController.swift in Sources */,
 				9F094FB828080D13006451C7 /* AppDelegate.swift in Sources */,
 				9F7D366A2809907900CE3DCB /* CurrentData+CoreDataProperties.swift in Sources */,
+				9F6A595428169421007936A5 /* GraphCollectionViewCell.swift in Sources */,
 				9F094FD928081342006451C7 /* OnboardingViewController.swift in Sources */,
 				9F094FD62808126A006451C7 /* FirstStartIndicator.swift in Sources */,
+				9F6A595028169127007936A5 /* MoreForHoursViewController.swift in Sources */,
 				9F7D36752809907900CE3DCB /* DailyData+CoreDataClass.swift in Sources */,
+				9F6A595728169D8A007936A5 /* HourForecastDetailsTableViewCell.swift in Sources */,
 				9F7D366E2809907900CE3DCB /* FeelsLikeData+CoreDataProperties.swift in Sources */,
 				9F7D36742809907900CE3DCB /* ForecastData+CoreDataProperties.swift in Sources */,
+				9F6A5952281693A8007936A5 /* HourlyGraphView.swift in Sources */,
 				9F7D366D2809907900CE3DCB /* FeelsLikeData+CoreDataClass.swift in Sources */,
 				9F7D36692809907900CE3DCB /* CurrentData+CoreDataClass.swift in Sources */,
 				9F094FE228082B08006451C7 /* Extension.swift in Sources */,
@@ -353,6 +407,7 @@
 				9F247BB02808519200B622D6 /* LocationManager.swift in Sources */,
 				9F7D36062809676C00CE3DCB /* DailyForecastCollectionViewCell.swift in Sources */,
 				9F7D36732809907900CE3DCB /* ForecastData+CoreDataClass.swift in Sources */,
+				9FCF97152817CC4C0052CDCC /* DayNightForecastView.swift in Sources */,
 				9F7D366B2809907900CE3DCB /* WeatherData+CoreDataClass.swift in Sources */,
 				9F247BB22808523B00B622D6 /* GeocodingModel.swift in Sources */,
 				9F094FBA28080D13006451C7 /* SceneDelegate.swift in Sources */,
@@ -361,6 +416,7 @@
 				9F7D3604280961B500CE3DCB /* HourlyForecastCollectionViewCell.swift in Sources */,
 				9F7D366F2809907900CE3DCB /* HourlyData+CoreDataClass.swift in Sources */,
 				9F247BAB28083E8800B622D6 /* SettingsViewController.swift in Sources */,
+				9FCF97172817CDAC0052CDCC /* DateCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -580,6 +636,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9FCF971A2817CFF50052CDCC /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9FCF971B2817CFF50052CDCC /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9FCF971A2817CFF50052CDCC /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		9F094FC028080D13006451C7 /* WeatherApp.xcdatamodeld */ = {

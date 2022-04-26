@@ -295,6 +295,8 @@ class LocationViewController: UIViewController {
         guard let hourlyData = hourlyForecast else {
             return
         }
+        let forTwentyFourHours = Array(hourlyData[0...23])
+        coordinator.showMoreForHoursViewController(location: locationLabel.text!, hourlyData: forTwentyFourHours)
     }
     
     private func updateForecastData() {
@@ -465,7 +467,8 @@ extension LocationViewController {
 extension LocationViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == hourlyForecastColletionView {
-            return hourlyForecast!.count
+            //return hourlyForecast!.count
+            return 8
         } else {
             return dailyForecast!.count
         }
@@ -487,9 +490,16 @@ extension LocationViewController: UICollectionViewDelegate, UICollectionViewData
         if collectionView == hourlyForecastColletionView {
             let cell = collectionView.cellForItem(at: indexPath) as! HourlyForecastCollectionViewCell
             cell.showSelected()
+            moreForDayButtonTapped()
         } else {
-            
-            //!!! при нажатии открыть контроллер и показать подробнее по дням
+            self.coordinator.showMoreForDaysViewController(location: locationLabel.text!, dailyData: dailyForecast!)
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        if collectionView == hourlyForecastColletionView {
+            let cell = collectionView.cellForItem(at: indexPath) as! HourlyForecastCollectionViewCell
+            cell.clearSelected()
         }
     }
 }
