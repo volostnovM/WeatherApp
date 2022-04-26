@@ -121,7 +121,20 @@ extension HourlyForecastCollectionViewCell {
         self.layer.shadowOffset = CGSize(width: -5, height: 5)
         self.clipsToBounds = true
         self.layer.masksToBounds = false
+        
         timeLabel.textColor = .white
         temperatureLabel.textColor = .white
+    }
+    
+    
+    func clearSelected() {
+        
+        self.layer.sublayers?.remove(at: 0)
+        
+        timeLabel.textColor = UIColor(red: 0.613,
+                                      green: 0.592,
+                                      blue: 0.592,
+                                      alpha: 1.0)
+        temperatureLabel.textColor = .black
     }
 }

@@ -133,6 +133,7 @@ extension MainViewController {
         view.addSubview(pageControl)
         
         [
+            //pageViewController.view.topAnchor.constraint(equalTo: pageControl.bottomAnchor),
             pageViewController.view.topAnchor.constraint(equalTo: view.topAnchor),
             pageViewController.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             pageViewController.view.trailingAnchor.constraint(equalTo: view.trailingAnchor),

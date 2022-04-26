@@ -15,6 +15,8 @@ protocol Coordinator {
     func showMainViewController() -> Void
     func showSettingsScreen(updateCompletion: @escaping () -> Void) -> Void
     func showLocationChoice(completion: @escaping () -> Void)
+    func showMoreForDaysViewController(location: String, dailyData: [DailyData]) -> Void
+    func showMoreForHoursViewController(location: String, hourlyData: [HourlyData]) -> Void
     func createLocationViewController(with forecast: ForecastData) -> LocationViewController
     func createAddNewLocationViewController() -> AddNewLocationViewController
     func goBack() -> Void
@@ -87,6 +89,18 @@ class MainCoordinator: Coordinator {
         navigationController.present(alertController, animated: true, completion: nil)
     }
     
+    func showMoreForDaysViewController(location: String, dailyData: [DailyData]) {
+        let moreForeDaysViewController = MoreForDaysViewController(location: location, dailyData: dailyData, coordinator: self)
+        navigationController.pushViewController(moreForeDaysViewController, animated: true)
+    }
+
+    func showMoreForHoursViewController(location: String, hourlyData: [HourlyData]) {
+        let moreForHoursViewController = MoreForHoursViewController(location: location,
+                                                                    hourlyData: hourlyData,
+                                                                    coordinator: self)
+        navigationController.pushViewController(moreForHoursViewController, animated: true)
+    }
+
     func createLocationViewController(with forecast: ForecastData) -> LocationViewController {
         let locationViewController = LocationViewController(coordinator: self,
                                                             viewModel: locationViewModel,
