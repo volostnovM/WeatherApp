@@ -18,7 +18,6 @@ class MoreForDaysViewController: UIViewController {
         let button = UIButton()
         button.setImage(UIImage(systemName: "arrow.left"), for: .normal)
         button.tintColor = .black
-        button.addTarget(self, action: #selector(backButtonTaped), for: .touchUpInside)
         button.toAutoLayout()
         return button
     }()
@@ -103,6 +102,11 @@ class MoreForDaysViewController: UIViewController {
         let indexPath = dateCollection.indexPathsForSelectedItems?.last ?? IndexPath(item: 0, section: 0)
         dateCollection.selectItem(at: indexPath, animated: true, scrollPosition: .centeredHorizontally)
         fillSubviews(forecastForOneDay: dailyData[0])
+        setTargetForButton()
+    }
+    
+    private func setTargetForButton() {
+        backButton.addTarget(self, action: #selector(backButtonTaped), for: .touchUpInside)
     }
     
 
