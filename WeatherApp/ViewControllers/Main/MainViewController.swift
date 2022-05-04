@@ -20,7 +20,6 @@ class MainViewController: UIViewController {
         let button = UIButton()
         button.setImage(UIImage(named: "settings"), for: .normal)
         button.tintColor = UIColor(named: "myBlack")
-        button.addTarget(self, action: #selector(settingButtonTapped), for: .touchUpInside)
         button.toAutoLayout()
         return button
     }()
@@ -29,7 +28,6 @@ class MainViewController: UIViewController {
         let button = UIButton()
         button.setImage(UIImage(named: "location"), for: .normal)
         button.tintColor = UIColor(named: "myBlack")
-        button.addTarget(self, action: #selector(locationButtonTapped), for: .touchUpInside)
         button.toAutoLayout()
         return button
     }()
@@ -60,6 +58,12 @@ class MainViewController: UIViewController {
         view.backgroundColor = .white
         downloadData()
         setupScreen()
+        setTargetForButton()
+    }
+    
+    private func setTargetForButton() {
+        settingsButton.addTarget(self, action: #selector(settingButtonTapped), for: .touchUpInside)
+        locationChoiceButton.addTarget(self, action: #selector(locationButtonTapped), for: .touchUpInside)
     }
     
     private func setupScreen() {

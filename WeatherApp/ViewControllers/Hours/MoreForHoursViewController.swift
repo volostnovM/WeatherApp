@@ -17,7 +17,6 @@ class MoreForHoursViewController: UIViewController {
         let button = UIButton()
         button.setImage(UIImage(systemName: "arrow.left"), for: .normal)
         button.tintColor = .black
-        button.addTarget(self, action: #selector(backButtonTaped), for: .touchUpInside)
         button.contentMode = .scaleAspectFill
         button.toAutoLayout()
         return button
@@ -76,6 +75,11 @@ class MoreForHoursViewController: UIViewController {
         hourForecastDetailsTableView.dataSource = self
         hourForecastDetailsTableView.register(HourForecastDetailsTableViewCell.self, forCellReuseIdentifier: "HourForecastDetailsTableViewCell")
         setupViews()
+        setTargetForButton()
+    }
+    
+    private func setTargetForButton() {
+        backButton.addTarget(self, action: #selector(backButtonTaped), for: .touchUpInside)
     }
     
     @objc private func backButtonTaped() {

@@ -59,7 +59,6 @@ class OnboardingViewController: UIViewController {
         button.titleLabel?.font = UIFont(name: "Rubik-Regular", size: 12)
         button.setTitleColor(.white, for: .normal)
         button.layer.cornerRadius = 10
-        button.addTarget(self, action: #selector(acceptButtonTapped), for: .touchUpInside)
         button.toAutoLayout()
         return button
     }()
@@ -70,7 +69,6 @@ class OnboardingViewController: UIViewController {
         button.contentHorizontalAlignment = .right
         button.titleLabel?.font =  UIFont(name: "Rubik-Regular", size: 16)
         button.setTitleColor(.white, for: .normal)
-        button.addTarget(self, action: #selector(cancelButtonTapped), for: .touchUpInside)
         button.toAutoLayout()
         return button
     }()
@@ -90,6 +88,12 @@ class OnboardingViewController: UIViewController {
         super.viewDidLoad()
         self.navigationController?.navigationBar.isHidden = true
         setupViews()
+        setTargetForButton()
+    }
+    
+    private func setTargetForButton() {
+        acceptButton.addTarget(self, action: #selector(acceptButtonTapped), for: .touchUpInside)
+        cancelButton.addTarget(self, action: #selector(cancelButtonTapped), for: .touchUpInside)
     }
     
     

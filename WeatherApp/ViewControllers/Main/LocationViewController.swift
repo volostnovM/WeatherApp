@@ -214,7 +214,6 @@ class LocationViewController: UIViewController {
                                      value: UIColor.black,
                                      range: NSRange(location: 0, length: atributedString.length))
         button.setAttributedTitle(atributedString, for: .normal)
-        button.addTarget(self, action: #selector(moreForDayButtonTapped), for: .touchUpInside)
         button.toAutoLayout()
         return button
     }()
@@ -280,6 +279,11 @@ class LocationViewController: UIViewController {
                                      selector: #selector(tick),
                                      userInfo: nil,
                                      repeats: true)
+        setTargetForButton()
+    }
+    
+    private func setTargetForButton() {
+        moreForDayButton.addTarget(self, action: #selector(moreForDayButtonTapped), for: .touchUpInside)
     }
     
     @objc private func tick() {

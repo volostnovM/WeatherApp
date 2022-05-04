@@ -93,7 +93,6 @@ class SettingsViewController: UIViewController {
         button.titleLabel?.font = UIFont(name: "Rubik-Regular", size: 16)
         button.setTitleColor(UIColor(named: "myWhite"), for: .normal)
         button.layer.cornerRadius = 10
-        button.addTarget(self, action: #selector(setPreferencesButtonTapped), for: .touchUpInside)
         button.toAutoLayout()
         return button
     }()
@@ -185,6 +184,11 @@ class SettingsViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = UIColor(named: "mainBlue")
         setupViews()
+        setTargetForButton()
+    }
+    
+    private func setTargetForButton() {
+        setPreferencesButton.addTarget(self, action: #selector(setPreferencesButtonTapped), for: .touchUpInside)
     }
     
     @objc private func setPreferencesButtonTapped() {
